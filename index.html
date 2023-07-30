@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo Login Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2 class="logo">Logo</h2>
+    <nav class="navi">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <button class="btnLogin">Login</button>
+    </nav>
+  </header>
+  <div class="wrapper">
+    <span class="icon-close"><img src="images/close.png" alt=""class="close-icon"></span>
+    <div class="form-box login">
+      <h2>Login</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"><img src="images/mail_lock_FILL0_wght400_GRAD0_opsz48.png" alt=""class="icon" /></span>
+          <input type="text" id="fname"class="userId" required>
+          <label for="userId">User Id</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><img src="images/lock.png" alt=""class="icon"></span>
+          <input type="password" id="passWord"class="passWord" required>
+          <label for="passWord">Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label>
+<input type="checkbox" name="" id="">
+Remember Me
+          </label>  
+        </form>
+          <a href="#">Forgot Password?</a></div>
+          <button type="submit" class="btn" id="loginBtn" onclick="logIn()">Login</button>
+          <div class="login-reg">
+            <p>Don't have an account?
+            <a href="#" class="register-link">Register</a></p>
+          </div>
+        </div>
+      
+    </div>
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form  onsubmit="">
+        <div class="input-box">
+          <span class="icon"><img src="images/name.png" alt=""class="icon" /></span>
+          <input type="text" class="fname rdata" id="firstName" required/>
+          <label for="fname">Full Name</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><img src="images/user.png" alt=""class="icon"></span>
+          <input type="userName" id="userName"class="userName rdata"  required/>
+          <label for="userName">UserName</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><img src="images/lock.png" alt=""class="icon"></span>
+          <input type="text" class="passWord rdata" id="pass" required/>
+          <label for="passWord">Password</label>
+        </div>
+       <div class="input-box">
+          <span class="icon"><img src="images/lock.png" alt=""class="icon"></span>
+          <input type="text" class="cpassword rdata"  id="cPass" required/>
+          <label for="cpassWord">Confirm Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label>
+<input type="checkbox" name="" id="tconditions">
+agree to the terms & conditions
+          </label>  
+        </form> 
+        </div>
+          <button type="submit" class="btn" id="register" onclick="register()">Register</button>
+          <div class="login-reg">
+            <p>already have an account?
+            <a href="#" class="login-link">Login</a></p>
+          </div> 
+          
+    </div>
+  </div>
+    
+    
+  
+  <script src="Javascrip.js"></script>
+</body>
+</html>

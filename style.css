@@ -1,0 +1,248 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+header  {
+  position:fixed;
+  top:0;
+  left:0;
+  padding:20px 100px;
+   width:100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo{
+  font-size:2em;
+  color:#fff;
+  user-select: none;
+
+}
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  background:url(images/raindrops.jpg)no-repeat;
+  background-size:cover;
+  background-position:center;
+  }
+.navi a{
+  position:relative;
+  font-size: 1.1em;
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  margin-left:40px;
+}
+
+.navi a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+   height:3px;
+  background:#fff;
+  transform-origin: right;
+  border-radius:5px;
+  transform:scaleX(0);
+  transition:transform .5s;
+
+}
+.navi a:hover::after{
+  transform:scaleX(1);
+  transform-origin:left;
+}
+
+.navi .btnLogin{
+  width:130px; 
+  height:50px;
+  background: transparent;
+  border:2px solid #fff;
+  outline:none;
+  border-radius:6px;
+  cursor:pointer;
+  color:#fff;
+  font-weight:500;
+  margin-left:40px;
+  transition:.5s;
+
+}
+  
+.navi .btnLogin:hover {
+  background:#fff;
+  color:#162938;
+}
+
+.wrapper{
+  position:relative;
+  width:500px;
+  height:600px;
+  background:transparent;
+  border:2px solid rgba(255,255,255,.5);
+  border-radius:20px;
+  backdrop-filter:blur(20px);
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+display:flex;
+justify-content: center;
+align-items: center;
+transition: transform .5s ease,height .2s ease;
+overflow:hidden;
+transform: scale(0);
+; 
+}
+.wrapper.active-popup{
+  transform: scale(1);
+}
+.wrapper.active{
+  height:720px;
+  
+}
+.wrapper .form-box.login{
+ transition : transform .18s ease;
+ transform:translateX(0);
+}
+.wrapper.active .form-box.login{
+  transition:none;
+  transform:translate(-700px);
+  
+}
+.form-box.register{
+position:absolute;
+transition:none;
+transform : translateX(800px);
+display: hiddendetermin;
+transition : transform .18s ease;
+display: none;
+
+}
+  .form-box.register.active{
+    transition : transform .18s ease;
+  transform:translateX(0);
+ display: block;
+  
+ }
+.wrapper .form-box{
+  width:100%;
+  padding:66px;
+}
+.form-box h2{
+font-size:2em;
+color:#162938;
+text-align:center;
+}
+.icon{
+  height:25px;
+  width:25px;
+  position:absolute;
+ right:8px;
+ top:10px;
+ font-size:1.2rem;
+ color:#162938;
+ line-height:57px;
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top:-5px;
+}
+
+.input-box{
+  position:relative;
+  width:100%;
+  height:60px;
+   border-bottom:2px solid #162938;
+  margin:30px 0;
+  transition:.5s;
+ 
+}
+.input-box input{
+  height:100%;
+  width:100%;
+  background-color: transparent;
+  border:none;
+  outline:none;
+  font-size:1.5rem;
+  color:#162938;
+  padding:0 35px 0 5px;
+}
+
+.input-box label{
+  position:absolute;
+  top:50%;
+  left:5px;
+  transform:translateY(-50%);
+  font-size:1.5rem;
+  color:#162938;
+  font-weight:500;
+  pointer-events: none;
+  margin:1px 1px 0px 0px;
+}
+.remember-forgot{
+  font-size: 1rem;
+  color:#162938;
+  font-weight: 500;
+  margin:-20px 0px 20px;
+  display:flex;
+  justify-content:space-between;
+}
+.remember-forgot label input{
+  accent-color: #162938;
+  margin-right:3px;
+    
+}
+.remember-forgot a {
+  color:#162938;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline;
+
+}
+
+.btn{
+  width:100%;
+  height:45px;
+  background: #162938;
+  border:none;
+  outline:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:1rem;
+  color:#fff;
+  font-weight: 500;
+}
+.login-reg{
+  font-size:1rem;
+  color:#162938;
+  text-align:center;
+  font-weight: 500;
+  margin:25px 0 10px;
+}
+
+.login-reg p a {
+  color:#162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-reg p a:hover{
+text-decoration: underline;
+}
+.close-icon{
+  position:absolute;
+  top: 0px;
+  right:0px;
+  width:45px;
+  height:45px;
+  font-size:1rem;
+  cursor:pointer;
+  z-index:1;
+  
+}

@@ -1,0 +1,21 @@
+step-1: Create four input fields
+step-2: get reference to each field
+step-3: get values on "change" event from each field
+step-4: get reference to button
+step-5: on button click, trigger a function
+step-6: write logic in the above function to:
+a) check if all values you got from input fields are not empty
+b) check if create and confirm password values are same
+if above conditions are satisfied
+e) store all the values in an array
+d) store them in local storage
+e) move to another page (in our case, we want to go to signin page)
+
+Sign In page
+
+step-1: create two input fields (username and password) and a button 
+step-2: get values of input fields
+step-3: on button click trigger a function to:
+a) get values from local storage which you stored while registeration process
+b) compare the values of username and password of local storage with the values get from this page (i.e username and password)
+c) if they match show alert "Logged In Successfuly" and navigate to the todo.html page otherwise, alert "Incorrect username and password"
